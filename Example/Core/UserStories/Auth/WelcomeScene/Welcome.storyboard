@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbI-IJ-dZW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="oXZ-fO-7pX">
+            <objects>
+                <viewController storyboardIdentifier="Welcome" id="RbI-IJ-dZW" customClass="WelcomeViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jE7-hv-MWO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-9i-swB" customClass="ExampleHeaderView" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="ExampleHeaderView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="6bk-hd-1Rr">
+                                <rect key="frame" x="107" y="124" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="m8O-i9-i2T"/>
+                                    <constraint firstAttribute="width" constant="200" id="wNs-nz-Oa7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="ExampleLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qA3-Am-UcC">
+                                <rect key="frame" x="44" y="692" width="326" height="116"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u04-3u-n6y" customClass="ExampleButton" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="48"/>
+                                        <color key="backgroundColor" name="Energy Yellow"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                        <state key="normal" title="Sign up with email">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="YellowButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="T6f-bF-DDL" kind="show" identifier="SignUp" id="FIf-5c-FXC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-rr-i9X" customClass="ExampleButton" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="68" width="326" height="48"/>
+                                        <color key="backgroundColor" name="Regal Blue"/>
+                                        <inset key="imageEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Continue with Facebook" image="FBIcon"/>
+                                        <connections>
+                                            <action selector="didTapFacebookButton:" destination="RbI-IJ-dZW" eventType="touchUpInside" id="aK4-EW-VhE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="PgE-KO-WQN"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-Nh-8AK" customClass="NantesLabel" customModule="Nantes">
+                                <rect key="frame" x="44" y="824" width="326" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="7mq-h2-Oyt"/>
+                                    <constraint firstAttribute="height" constant="22" id="qOX-Ok-maD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <color key="textColor" name="Regal Blue"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Already registered? Sign in"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQ2-Nh-8AK" firstAttribute="top" secondItem="qA3-Am-UcC" secondAttribute="bottom" constant="16" id="6Wq-NJ-Iod"/>
+                            <constraint firstItem="6bk-hd-1Rr" firstAttribute="top" secondItem="UF9-cX-tWK" secondAttribute="top" constant="80" id="Dj9-Cm-heZ"/>
+                            <constraint firstItem="Qrb-9i-swB" firstAttribute="height" secondItem="jE7-hv-MWO" secondAttribute="height" multiplier="0.55" priority="999" id="KOf-zu-kaL"/>
+                            <constraint firstItem="UF9-cX-tWK" firstAttribute="bottom" secondItem="aQ2-Nh-8AK" secondAttribute="bottom" constant="16" id="M6l-GF-ooq"/>
+                            <constraint firstItem="Qrb-9i-swB" firstAttribute="top" secondItem="jE7-hv-MWO" secondAttribute="top" id="NV2-OW-bUJ"/>
+                            <constraint firstItem="Qrb-9i-swB" firstAttribute="leading" secondItem="UF9-cX-tWK" secondAttribute="leading" id="O4N-qZ-X7l"/>
+                            <constraint firstItem="6bk-hd-1Rr" firstAttribute="centerX" secondItem="jE7-hv-MWO" secondAttribute="centerX" id="Qu1-7L-rA3"/>
+                            <constraint firstItem="qA3-Am-UcC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qrb-9i-swB" secondAttribute="bottom" constant="35" id="Rjq-eW-tJ8"/>
+                            <constraint firstItem="qA3-Am-UcC" firstAttribute="leading" secondItem="UF9-cX-tWK" secondAttribute="leading" constant="44" id="WDh-si-090"/>
+                            <constraint firstItem="UF9-cX-tWK" firstAttribute="trailing" secondItem="Qrb-9i-swB" secondAttribute="trailing" id="Wyh-Dj-aEB"/>
+                            <constraint firstItem="UF9-cX-tWK" firstAttribute="trailing" secondItem="qA3-Am-UcC" secondAttribute="trailing" constant="44" id="bWP-EE-HEL"/>
+                            <constraint firstItem="aQ2-Nh-8AK" firstAttribute="centerX" secondItem="jE7-hv-MWO" secondAttribute="centerX" id="keu-kZ-PKN"/>
+                            <constraint firstItem="aQ2-Nh-8AK" firstAttribute="width" secondItem="qA3-Am-UcC" secondAttribute="width" id="ppG-xh-2pV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UF9-cX-tWK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pOS-c9-9B0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="signInNantesLabel" destination="aQ2-Nh-8AK" id="0nU-PV-OVg"/>
+                        <outlet property="signUpWithFacebookButton" destination="QsK-rr-i9X" id="PXE-sY-of5"/>
+                        <outlet property="signUpWithPhoneNumerButton" destination="u04-3u-n6y" id="UMa-Gw-Nr8"/>
+                        <segue destination="zAA-VU-UNd" kind="show" identifier="SignIn" id="gpC-72-Bbk"/>
+                        <segue destination="JSX-64-FDG" kind="show" identifier="Main" id="yO7-8N-O3K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZ8-s6-h4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="-314.0625"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="yzn-Hy-qca">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="T6f-bF-DDL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fp-nU-hec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-452"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="xnm-2e-mVj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="JSX-64-FDG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LH4-Wz-ZrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-330"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="v3X-7T-gaQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" id="zAA-VU-UNd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oq4-JE-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-187"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gvS-7u-W9x">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationWelcome" navigationBarHidden="YES" id="8kv-Iy-IAV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t9V-z0-Vjm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroNavigationAnimationTypeString" value="fade"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="RbI-IJ-dZW" kind="relationship" relationship="rootViewController" id="waz-NW-hvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwh-Wc-MtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614" y="-314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Example" width="169" height="46"/>
+        <image name="FBIcon" width="26" height="26"/>
+        <namedColor name="Energy Yellow">
+            <color red="0.96078431372549022" green="0.8901960784313725" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Regal Blue">
+            <color red="0.0" green="0.27450980392156865" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="Apple"/>
+</document>

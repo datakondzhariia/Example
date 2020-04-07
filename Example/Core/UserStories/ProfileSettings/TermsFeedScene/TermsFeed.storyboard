@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cPe-DV-o6c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!-- -->
+        <scene sceneID="5sx-gC-bNh">
+            <objects>
+                <viewController storyboardIdentifier="TermsFeed" id="cPe-DV-o6c" customClass="TermsFeedViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4q-w6-ESE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="f1O-82-GNO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGq-If-XiG" customClass="ExampleWebView" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="infoAgreement" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleFileName" value="infoAgreement"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNV-kC-vPA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8im-si-KFh">
+                                        <rect key="frame" x="182" y="379" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QxT-q8-8py"/>
+                                            <constraint firstAttribute="width" constant="50" id="yPo-6I-uaw"/>
+                                        </constraints>
+                                        <color key="color" name="Apple"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8im-si-KFh" firstAttribute="centerX" secondItem="QNV-kC-vPA" secondAttribute="centerX" id="Dtu-Qd-siG"/>
+                                    <constraint firstItem="8im-si-KFh" firstAttribute="centerY" secondItem="QNV-kC-vPA" secondAttribute="centerY" id="cu7-I3-gfw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="f1O-82-GNO" secondAttribute="bottom" id="01I-mb-Feh"/>
+                            <constraint firstItem="f1O-82-GNO" firstAttribute="trailing" secondItem="AQX-h1-yZT" secondAttribute="trailing" id="8ES-hh-fxw"/>
+                            <constraint firstItem="f1O-82-GNO" firstAttribute="leading" secondItem="AQX-h1-yZT" secondAttribute="leading" id="Gk9-rV-g9G"/>
+                            <constraint firstItem="QNV-kC-vPA" firstAttribute="height" secondItem="xGq-If-XiG" secondAttribute="height" id="SUR-Sz-lxx"/>
+                            <constraint firstItem="AQX-h1-yZT" firstAttribute="trailing" secondItem="f1O-82-GNO" secondAttribute="trailing" id="cTj-Kl-HTd"/>
+                            <constraint firstItem="QNV-kC-vPA" firstAttribute="trailing" secondItem="AQX-h1-yZT" secondAttribute="trailing" id="gix-Fh-5bU"/>
+                            <constraint firstAttribute="bottom" secondItem="f1O-82-GNO" secondAttribute="bottom" id="gvc-aW-2xU"/>
+                            <constraint firstItem="f1O-82-GNO" firstAttribute="leading" secondItem="AQX-h1-yZT" secondAttribute="leading" id="mqe-Yb-Zd3"/>
+                            <constraint firstItem="f1O-82-GNO" firstAttribute="top" secondItem="AQX-h1-yZT" secondAttribute="top" id="pBk-o4-VHb"/>
+                            <constraint firstItem="QNV-kC-vPA" firstAttribute="leading" secondItem="AQX-h1-yZT" secondAttribute="leading" id="u57-O8-A9t"/>
+                            <constraint firstItem="QNV-kC-vPA" firstAttribute="top" secondItem="AQX-h1-yZT" secondAttribute="top" id="yFJ-ff-LV5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AQX-h1-yZT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" " id="NAr-tZ-oWc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="eqp-pB-gL1"/>
+                        <barButtonItem key="leftBarButtonItem" image="BackButtonItem" id="Lld-gd-2df">
+                            <connections>
+                                <action selector="backButtonItem:" destination="cPe-DV-o6c" id="w9p-3F-GT7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="8im-si-KFh" id="u5A-b3-FZo"/>
+                        <outlet property="exampleWebView" destination="xGq-If-XiG" id="MBK-LX-Z7q"/>
+                        <outlet property="loaderView" destination="QNV-kC-vPA" id="QwS-v0-Sxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaJ-bG-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackButtonItem" width="11" height="17"/>
+        <namedColor name="Apple">
+            <color red="0.35686274509803922" green="0.73725490196078436" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="Apple"/>
+</document>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IRG-w1-cKl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="gUk-EJ-zIw">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="IRG-w1-cKl" customClass="SignInViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hQM-qq-Qtg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-RP-GCE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQv-6K-uj2" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opw-iS-1Hp" customClass="ExampleHeaderView" customModule="Example" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="ExampleHeaderView"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4uY-dI-rJt">
+                                                <rect key="frame" x="44" y="418" width="326" height="96"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS4-gE-iRC" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="28"/>
+                                                        <color key="tintColor" name="Regal Blue"/>
+                                                        <color key="textColor" name="Regal Blue"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Email"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" name="RegalBlueWithOpacity"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                                <color key="value" name="Regal Blue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" name="RegalBlueWithOpacity"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                <real key="value" value="0.20000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="infoTextColor">
+                                                                <color key="value" name="Cardinal"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="EmailField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="IRG-w1-cKl" id="hhn-4Q-zph"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKF-so-aq6" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                        <rect key="frame" x="0.0" y="68" width="326" height="28"/>
+                                                        <color key="tintColor" name="Regal Blue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="fEy-f3-GZ2"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="Regal Blue"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Password"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" name="RegalBlueWithOpacity"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                                <color key="value" name="Regal Blue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" name="RegalBlueWithOpacity"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                <real key="value" value="0.20000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="infoTextColor">
+                                                                <color key="value" name="Cardinal"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="PasswordField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="IRG-w1-cKl" id="9f8-bk-84i"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-vK-tS4">
+                                                <rect key="frame" x="44" y="539" width="326" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="dB8-6Y-JOD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                                <state key="normal" title="Forgot password?">
+                                                    <color key="titleColor" name="Regal Blue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapForgotPasswordButton:" destination="IRG-w1-cKl" eventType="touchUpInside" id="vPY-gb-aez"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IFm-fp-wSH">
+                                                <rect key="frame" x="44" y="756" width="326" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-Rf-Smr" customClass="ExampleButton" customModule="Example" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="48"/>
+                                                        <color key="backgroundColor" name="Energy Yellow"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="Hur-rc-cCE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                                        <state key="normal" title="Sign in">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="YellowButton"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didTapSignInButton:" destination="IRG-w1-cKl" eventType="touchUpInside" id="cM6-26-Vsd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already registered? Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3jX-Tx-OQd" customClass="NantesLabel" customModule="Nantes">
+                                                        <rect key="frame" x="0.0" y="68" width="326" height="22"/>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                        <color key="textColor" name="Regal Blue"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don’t have an account? Sign up"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="1Dg-0s-og8"/>
+                                                </constraints>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="7qL-7g-G6X">
+                                                <rect key="frame" x="107" y="80" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="70p-eF-pHR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="MuO-00-qa0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="ExampleLogo"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IFm-fp-wSH" firstAttribute="width" secondItem="4uY-dI-rJt" secondAttribute="width" id="0Hj-Wa-RKo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Opw-iS-1Hp" secondAttribute="trailing" id="4tZ-ko-B67"/>
+                                            <constraint firstItem="Opw-iS-1Hp" firstAttribute="height" secondItem="oQv-6K-uj2" secondAttribute="height" multiplier="0.45" id="CWk-PV-1Tu"/>
+                                            <constraint firstItem="4uY-dI-rJt" firstAttribute="top" secondItem="Opw-iS-1Hp" secondAttribute="bottom" constant="30" id="CvK-Te-XXo"/>
+                                            <constraint firstItem="9Ql-vK-tS4" firstAttribute="centerX" secondItem="oQv-6K-uj2" secondAttribute="centerX" id="DG1-WE-gmC"/>
+                                            <constraint firstAttribute="bottom" secondItem="IFm-fp-wSH" secondAttribute="bottom" constant="16" id="Dpz-X0-pNk"/>
+                                            <constraint firstAttribute="trailing" secondItem="4uY-dI-rJt" secondAttribute="trailing" constant="44" id="JQe-3X-qSU"/>
+                                            <constraint firstItem="4uY-dI-rJt" firstAttribute="leading" secondItem="oQv-6K-uj2" secondAttribute="leading" constant="44" id="Lny-NO-kqa"/>
+                                            <constraint firstItem="7qL-7g-G6X" firstAttribute="centerX" secondItem="oQv-6K-uj2" secondAttribute="centerX" id="M3N-p5-uEL"/>
+                                            <constraint firstItem="IFm-fp-wSH" firstAttribute="centerX" secondItem="oQv-6K-uj2" secondAttribute="centerX" id="Puv-Oi-dUz"/>
+                                            <constraint firstItem="9Ql-vK-tS4" firstAttribute="top" secondItem="4uY-dI-rJt" secondAttribute="bottom" constant="25" id="bbd-FT-9pz"/>
+                                            <constraint firstItem="Opw-iS-1Hp" firstAttribute="leading" secondItem="oQv-6K-uj2" secondAttribute="leading" id="dxz-7a-WxX"/>
+                                            <constraint firstItem="7qL-7g-G6X" firstAttribute="top" secondItem="oQv-6K-uj2" secondAttribute="top" constant="80" id="fmn-IG-uB0"/>
+                                            <constraint firstItem="IFm-fp-wSH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Ql-vK-tS4" secondAttribute="bottom" constant="20" id="wRc-Yl-pzQ"/>
+                                            <constraint firstItem="9Ql-vK-tS4" firstAttribute="width" secondItem="4uY-dI-rJt" secondAttribute="width" id="yd4-Hx-WYW"/>
+                                            <constraint firstItem="Opw-iS-1Hp" firstAttribute="top" secondItem="oQv-6K-uj2" secondAttribute="top" id="zeo-s7-Hjq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oQv-6K-uj2" firstAttribute="top" secondItem="gkT-RP-GCE" secondAttribute="top" id="0vW-jS-TLn"/>
+                                    <constraint firstAttribute="trailing" secondItem="oQv-6K-uj2" secondAttribute="trailing" id="Atb-7l-JUD"/>
+                                    <constraint firstItem="oQv-6K-uj2" firstAttribute="height" secondItem="gkT-RP-GCE" secondAttribute="height" id="Iiq-EV-HQf"/>
+                                    <constraint firstAttribute="bottom" secondItem="oQv-6K-uj2" secondAttribute="bottom" id="WVr-I7-NPI"/>
+                                    <constraint firstItem="oQv-6K-uj2" firstAttribute="leading" secondItem="gkT-RP-GCE" secondAttribute="leading" id="qIy-8g-pfg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gkT-RP-GCE" firstAttribute="trailing" secondItem="Hb3-uU-zlt" secondAttribute="trailing" id="6G6-8C-kmJ"/>
+                            <constraint firstItem="gkT-RP-GCE" firstAttribute="top" secondItem="hQM-qq-Qtg" secondAttribute="top" id="GBe-71-F76"/>
+                            <constraint firstItem="gkT-RP-GCE" firstAttribute="leading" secondItem="Hb3-uU-zlt" secondAttribute="leading" id="Nrf-UH-jql"/>
+                            <constraint firstItem="oQv-6K-uj2" firstAttribute="width" secondItem="hQM-qq-Qtg" secondAttribute="width" id="OTB-rf-Lld"/>
+                            <constraint firstItem="gkT-RP-GCE" firstAttribute="bottom" secondItem="Hb3-uU-zlt" secondAttribute="bottom" id="XfB-ig-eEa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hb3-uU-zlt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eyf-JF-1n1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="YZ6-1B-i1t"/>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="emailTextField" destination="gS4-gE-iRC" id="JEM-fQ-M7I"/>
+                        <outlet property="passwordTextField" destination="RKF-so-aq6" id="KZw-cq-giH"/>
+                        <outlet property="signUpNantesLabel" destination="3jX-Tx-OQd" id="RIi-Tu-E8c"/>
+                        <segue destination="4Fj-iI-GY3" kind="show" identifier="SignUp" id="RRD-jn-PY6"/>
+                        <segue destination="bLk-rm-9oM" kind="show" identifier="Main" id="Dab-ZH-pEP"/>
+                        <segue destination="za3-dd-CHn" kind="show" identifier="PasswordReset" id="T6n-VL-SGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tC-zq-RQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272.46376811594206" y="-1.3392857142857142"/>
+        </scene>
+        <!--PasswordReset-->
+        <scene sceneID="l2n-M7-tyU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PasswordReset" id="za3-dd-CHn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rbB-el-2MB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwY-NN-DZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="-1"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="9AR-KV-eWK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="4Fj-iI-GY3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVS-Gf-CAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K9o-EA-eUA">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationSignIn" id="aVk-kc-cWp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="czx-iE-2Yw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroNavigationAnimationTypeString" value="fade"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="IRG-w1-cKl" kind="relationship" relationship="rootViewController" id="3Op-AA-Dn2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3L-dp-ej6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272" y="-708"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="p1o-m8-Yyi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="bLk-rm-9oM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hc-6z-BL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="-94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Example" width="169" height="46"/>
+        <namedColor name="Cardinal">
+            <color red="0.74117647058823533" green="0.094117647058823528" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Energy Yellow">
+            <color red="0.96078431372549022" green="0.8901960784313725" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Regal Blue">
+            <color red="0.0" green="0.27450980392156865" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RegalBlueWithOpacity">
+            <color red="0.0" green="0.27450980392156865" blue="0.40392156862745099" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="Apple"/>
+</document>

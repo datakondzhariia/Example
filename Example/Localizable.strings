@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Example
+
+  Created by Data Kondzhariia on 24.03.2020.
+  Copyright © 2020 Example. All rights reserved.
+*/
+
+// MARK: - Error Messages
+
+"EmptyBody" = "Body is empty.";
+"WrongDataFormat" = "Data is wrong format.";
+"NoInternetConnection" = "The Internet connection appears to be offline";
+"NoAccessLocation" = "Access Location is denied.";
+"LocationNotDefined" = "Your location is not defined.";
+"MailNotAvailable" = "Mail services are not available.";
+"CurrentUserNotFound" = "Current user not found.";
+"Other" = "Sorry, something went wrong. Please try again in a few minutes.";
+
+// MARK: - Fields
+
+// First Name Field
+"EmptyFirstNameField" = "First name is required";
+"CountCharactersFirstNameField" = "First name can not exceed 30 characters";
+
+// Last Name Filed
+"EmptyLastNameField" = "Last name is required";
+"CountCharactersLastNameField" = "Last name can not exceed 30 characters";
+
+// Email Field
+"EmptyEmailField" = "Email is required";
+"RegexEmail" = "Please provide valid e-mail address";
+    
+// Password Field
+"EmptyPasswordField" = "Password is required";
+"RegexPassword" = "Password must be more than 8 characters";
+"MatchConfirmPassword" = "Password is required";
+
+// MARK: - Alerts
+
+// Log Out Alert
+"AlertTitleLogOut" = "Log out";
+"AlertMessageLogOut" = "Do you really want to logout from your account?";
+
+// Password Reset
+"AlertTitlePasswordReset" = "Success";
+"AlertMessagePasswordReset" = "Please, check your email and click on the provided link to reset your password";
+
+// MARK: - Text Buttons
+"SignUp" = "Signup";
+"SignIn" = "Signin";

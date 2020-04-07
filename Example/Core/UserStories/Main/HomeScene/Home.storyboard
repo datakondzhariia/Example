@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jSC-I4-O4s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="EtN-s8-DiC">
+            <objects>
+                <navigationController id="jSC-I4-O4s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="LocationInactive" selectedImage="LocationIcon" id="QJh-R1-ueG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HqH-e9-gtM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Apple"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hVm-0h-fml" kind="relationship" relationship="rootViewController" id="kcQ-qW-GYq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrm-54-7fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1322" y="2215"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="01s-z0-KBf">
+            <objects>
+                <viewController id="hVm-0h-fml" customClass="HomeViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVf-qs-HlH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpA-Ls-Yae">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
+                                <connections>
+                                    <segue destination="qKj-QP-iK5" kind="embed" identifier="Map" id="CRh-bv-109"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6TG-jA-xVK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfa-Bh-pMg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="JyK-iC-m5D"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-Ld-bSv" customClass="LocationAccessView" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="AQT-jG-GcO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ih4-Ra-X4R" firstAttribute="trailing" secondItem="GpA-Ls-Yae" secondAttribute="trailing" id="1Ha-4h-aTr"/>
+                            <constraint firstItem="6TG-jA-xVK" firstAttribute="top" secondItem="ih4-Ra-X4R" secondAttribute="top" id="3vp-h3-FCG"/>
+                            <constraint firstItem="GpA-Ls-Yae" firstAttribute="top" secondItem="ih4-Ra-X4R" secondAttribute="top" id="J2g-Ds-3JE"/>
+                            <constraint firstItem="ih4-Ra-X4R" firstAttribute="trailing" secondItem="6TG-jA-xVK" secondAttribute="trailing" id="Nyz-4E-MpM"/>
+                            <constraint firstItem="ih4-Ra-X4R" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6TG-jA-xVK" secondAttribute="bottom" id="Qgv-F8-G1T"/>
+                            <constraint firstItem="GpA-Ls-Yae" firstAttribute="leading" secondItem="ih4-Ra-X4R" secondAttribute="leading" id="W8f-YA-m1y"/>
+                            <constraint firstItem="6TG-jA-xVK" firstAttribute="leading" secondItem="ih4-Ra-X4R" secondAttribute="leading" id="im1-fe-43B"/>
+                            <constraint firstItem="ih4-Ra-X4R" firstAttribute="bottom" secondItem="GpA-Ls-Yae" secondAttribute="bottom" id="mOa-dg-cBQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ih4-Ra-X4R"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Map" id="JwC-Od-l03"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="locationAccessView" destination="ezV-Ld-bSv" id="O9L-8u-jdj"/>
+                        <outlet property="mapViewContainer" destination="GpA-Ls-Yae" id="BUg-sw-u9t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nv0-8N-ngH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="2215"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Wc9-Ti-AwY">
+            <objects>
+                <viewController id="qKj-QP-iK5" customClass="MapViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ub8-h2-QHf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OQj-g9-oUl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFx-An-Wkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="2901"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LocationIcon" width="14" height="18"/>
+        <image name="LocationInactive" width="16" height="16"/>
+        <namedColor name="Apple">
+            <color red="0.35686274509803922" green="0.73725490196078436" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

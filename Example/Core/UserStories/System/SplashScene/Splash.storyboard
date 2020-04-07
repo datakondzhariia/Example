@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NPh-tN-Yz9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="pEC-Vm-LsM">
+            <objects>
+                <viewController id="8cU-xp-aze" customClass="SplashViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u47-wO-rh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-dV-GEH">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hjr-7X-vh0"/>
+                                    <constraint firstAttribute="width" constant="200" id="uRk-c6-ccl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="ExampleLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="Apple"/>
+                        <constraints>
+                            <constraint firstItem="5rx-dV-GEH" firstAttribute="centerX" secondItem="u47-wO-rh6" secondAttribute="centerX" id="QtP-aF-MIC"/>
+                            <constraint firstItem="5rx-dV-GEH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jQk-Jf-b8a" secondAttribute="top" priority="999" constant="80" id="aYt-Lf-ssl"/>
+                            <constraint firstItem="5rx-dV-GEH" firstAttribute="centerY" secondItem="u47-wO-rh6" secondAttribute="centerY" id="qSo-Ro-gWx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jQk-Jf-b8a"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="53i-dZ-0V0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="Fm7-mh-Hah" kind="show" identifier="Welcome" id="P5p-Tu-Gjz"/>
+                        <segue destination="nko-kK-Jpl" kind="show" identifier="Main" id="8g6-O2-jeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsR-6X-8Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="140.625"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="eoe-qC-qB0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" id="Fm7-mh-Hah" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SMq-wh-mno"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPG-dY-dXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-12"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="QFH-J6-b7F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="nko-kK-Jpl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jcD-tX-gWo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sw9-5k-LVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q9W-0q-tcU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NPh-tN-Yz9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZXS-6f-PZZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroNavigationAnimationTypeString" value="fade"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="8cU-xp-aze" kind="relationship" relationship="rootViewController" id="shT-6c-bgj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWo-Up-cPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Example" width="169" height="46"/>
+        <namedColor name="Apple">
+            <color red="0.35686274509803922" green="0.73725490196078436" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="Apple"/>
+</document>
