@@ -312,6 +312,26 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		CEA580FD243DED07000F5E95 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5810B240D355D0087EFED /* AppDelegate.swift */,
+				FA74911E24100698007852C4 /* CompositeAppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CEA580FE243DED19000F5E95 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA9658A1240D812400C0C651 /* Constants.swift */,
+				C78F62542429724C00247406 /* Localizable.strings */,
+				FAE58114240D355F0087EFED /* Assets.xcassets */,
+				FA9658A3240D814700C0C651 /* Colors.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		FA9658A5240D816600C0C651 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,12 +827,8 @@
 			isa = PBXGroup;
 			children = (
 				FA9658A5240D816600C0C651 /* Core */,
-				FAE5810B240D355D0087EFED /* AppDelegate.swift */,
-				FA74911E24100698007852C4 /* CompositeAppDelegate.swift */,
-				FA9658A1240D812400C0C651 /* Constants.swift */,
-				C78F62542429724C00247406 /* Localizable.strings */,
-				FAE58114240D355F0087EFED /* Assets.xcassets */,
-				FA9658A3240D814700C0C651 /* Colors.xcassets */,
+				CEA580FD243DED07000F5E95 /* App */,
+				CEA580FE243DED19000F5E95 /* SupportingFiles */,
 			);
 			path = Example;
 			sourceTree = "<group>";
